@@ -1,0 +1,66 @@
+{
+	"name": "esensdesign/snipcart-api",
+	"description": "[Forked] A Laravel wrapper for the Snipcart API",
+	"keywords": [
+		"laravel",
+		"snipcart",
+		"snipcart-api",
+		"wrapper",
+		"api",
+		"e-commerce",
+		"shop"
+	],
+	"homepage": "https://github.com/aerni/snipcart-api",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Michael Aerni",
+			"email": "hello@michaelaerni.ch",
+			"homepage": "https://www.michaelaerni.ch",
+			"role": "Developer"
+		},
+		{
+			"name": "Esens Design",
+			"email": "info@esens.nl",
+			"homepage": "https://www.esens.nl"
+		}
+	],
+    "require": {
+        "php": "^8.2",
+        "guzzlehttp/guzzle": "^7.5",
+        "illuminate/support": "^10.0"
+    },
+    "require-dev": {
+        "nunomaduro/collision": "^7.0",
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^10.0"
+    },
+	"autoload": {
+		"psr-4": {
+			"Esensdesign\\SnipcartApi\\": "src"
+		}
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Esensdesign\\SnipcartApi\\Tests\\": "tests"
+        },
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
+	"scripts": {
+		"test": "vendor/bin/phpunit"
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Esensdesign\\SnipcartApi\\SnipcartApiServiceProvider"
+			]
+		}
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"prefer-stable": true,
+	"minimum-stability": "dev"
+}
